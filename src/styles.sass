@@ -1,0 +1,51 @@
+@import assets/sass/_reset
+
+@font-face
+  font-family: "Road Rage"
+  src: url("assets/fonts/Road_Rage.woff") format("woff")
+  src: url("assets/fonts/Road_Rage.ttf") format("truetype")
+  src: url("assets/fonts/Road_Rage.otf") format("opentype")
+
+body, h1
+  font-family: "Road Rage", san-serif
+
+body
+  background-color: black
+
+h1
+  font-size: 128px
+  color: #fd5a91
+  text-shadow: 0px 5px 10px #fd5a91
+  animation: shadowpulse 3210ms ease infinite, jitter 3500ms alternate infinite
+
+video
+  opacity: 0.75
+  object-fit: cover
+  width: 100vw
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+
+@keyframes shadowpulse
+  0%
+    text-shadow: 0px 5px 10px #fd5a91
+  50%
+    text-shadow: 0px 2px 25px #fd5a91
+  100%
+    text-shadow: 0px 5px 10px #fd5a91
+
+@keyframes jitter
+  0%
+    transform: skewX(-15deg), rotate(3deg)
+  1.5%
+    transform: skewX(15deg)
+  3%
+    transform: skewX(-15deg), rotate(-3deg)
+  4.5%
+    transform: skewX(15deg)
+  6%
+    transform: skewX(0deg), rotate(0deg)
+  100%
+    transform: skewX(0deg)

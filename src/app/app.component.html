@@ -1,0 +1,9 @@
+<section>
+  <h1>
+    <ng-container *ngIf="currentPrice$ | async; else loading">
+      <span class="not-hovering">${{currentPrice$ | async}}</span>
+      <span class="hovering">{{direction}}</span>
+    </ng-container>
+    <ng-template #loading>3.. 2.. 1..</ng-template>
+  </h1>
+</section>
